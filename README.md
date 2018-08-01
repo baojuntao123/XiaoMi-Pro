@@ -2,13 +2,13 @@
 
 Hackintosh your XiaoMi Pro Notebook
 
-
+[English](README.md) | [中文](README-CN.md)
 
 ## Features
 
 * Support 10.13.x and 10.14
 * CPU native support
-* The sound card is ALC298, fake with AppleALC, layout-id: 99; and injection information is located at `/CLOVER/ACPI/patched/SSDT-ALC298_XiaoMiPro.aml`
+* The sound card is ALC298, fake with AppleALC, layout-id: 99; and injection information is located at `/CLOVER/config.plist`
 * Touchpad driver using `VoodooI2C`, support for multiple gestures; touchpad boot can be used normally, no drift, no wakeup
 * Other ACPI patch fixes using hotpatch mode, file located in `/CLOVER/ACPI/patched`
 * USB shadowing using `/CLOVER/ACPI/patched/SSDT-USB.aml`
@@ -21,6 +21,8 @@ Hackintosh your XiaoMi Pro Notebook
 - [RehabMan](https://github.com/RehabMan) Updated [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and [OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) and [OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) and [OS-X-ACPI-Battery-Driver](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) and [OS-X-Null-Ethernet](https://github.com/RehabMan/OS-X-Null-Ethernet) and [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller) for maintenance
 
 - [vit9696](https://github.com/vit9696) Updated [Lilu](https://github.com/acidanthera/Lilu) and [AppleALC](https://github.com/acidanthera/AppleALC) and [WhateverGreen](https://github.com/acidanthera/WhateverGreen) for maintenance
+
+- [BarbaraPalvin](https://github.com/BarbaraPalvin) Updated [IntelGraphicsDVMTFixup](https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup) for maintenance
 
 - [Pike R. Alpha](https://github.com/Piker-Alpha) Updated [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) and [AppleIntelInfo](https://github.com/Piker-Alpha/AppleIntelInfo) for maintenance
 
@@ -137,15 +139,16 @@ A complete EFI archive is available [releases](https://github.com/stevezhengshiq
    - Update CPUFriendDataProvider to save power
    - Update Clover r4458
 
-- 7-23-2018
-   - Update Clover r4618
+- 7-27-2018
+   - Update Clover r4625
    - Update AppleALC v1.3.1
    - Update Lilu v1.2.6
    - Update CPUFriendDataProvider by using MBP15,2's PM template
    - Update VoodooI2C v2.0.3
+   - Update CodecCommander v2.6.3
    - Use WhateverGreen to replace IntelGraphicsFixup and Shiki
-   - Use Clover patch to replace IntelGraphicsDVMTFixup
    - Use VoodooPS2Controller to replace ApplePS2SmartTouchPad
+   - Add minStolen Clover patch
    - Add support for Mojave (the installation instruction is at above)
 
 ## A reward

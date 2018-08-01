@@ -2,13 +2,13 @@
 
 让你的小米PRO笔记本吃上黑苹果
 
-
+[English](README.md) | [中文](README-CN.md)
 
 ## 支持列表
 
 * 支持10.13.x 和 10.14
 * CPU为第八代，原生支持
-* 声卡为ALC298，采用AppleALC仿冒，layout-id为99，注入信息位于 `/CLOVER/ACPI/patched/SSDT-ALC298_XiaoMiPro.aml`
+* 声卡为ALC298，采用AppleALC仿冒，layout-id为99，注入信息位于 `/CLOVER/config.plist`
 * 触摸板驱动程序使用VoodooI2C，支持多手势，触摸板开机可正常使用，不漂移，无需唤醒
 * 其他ACPI补丁修复使用hotpatch方式，文件位于 `/CLOVER/ACPI/patched` 中
 * USB遮盖使用 `/CLOVER/ACPI/patched/SSDT-USB.aml`
@@ -116,15 +116,16 @@
     * 更新`CPUFriendDataProvider`让系统更省电
     * 更新Clover r4458
 
-* 7-23-2018
-    * 更新Clover r4618
+* 7-27-2018
+    * 更新Clover r4625
     * 更新`AppleALC` v1.3.1
     * 更新`Lilu` v1.2.6
     * 更新`CPUFriendDataProvider` 通过使用MBP15,2的电源配置
     * 更新`VoodooI2C` v2.0.3
+    * 更新`CodecCommander` v2.6.3
     * 新增`WhateverGreen` 来代替IntelGraphicsFixup 和 Shiki
-    * 新增minStolen的Clover补丁来代替`IntelGraphicsDVMTFixup`
     * 新增`VoodooPS2Controller` 来代替ApplePS2SmartTouchPad
+    * 新增minStolen的Clover补丁
     * 新增对Mojave的支持（安装教程在下面）
 
 ## 鸣谢
@@ -132,6 +133,8 @@
 - [RehabMan](https://github.com/RehabMan) 提供 [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and [OS-X-USB-Inject-All](https://github.com/RehabMan/OS-X-USB-Inject-All) and [OS-X-FakeSMC-kozlek](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) and [OS-X-ACPI-Battery-Driver](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver) and [OS-X-Null-Ethernet](https://github.com/RehabMan/OS-X-Null-Ethernet) and [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller) 的维护
 
 - [vit9696](https://github.com/vit9696) 提供 [Lilu](https://github.com/acidanthera/Lilu) and [AppleALC](https://github.com/acidanthera/AppleALC) and [WhateverGreen](https://github.com/acidanthera/WhateverGreen) 的维护
+
+- [BarbaraPalvin](https://github.com/BarbaraPalvin) 提供 [IntelGraphicsDVMTFixup](https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup) 的维护
 
 - [Pike R. Alpha](https://github.com/Piker-Alpha) 提供 [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh) and [AppleIntelInfo](https://github.com/Piker-Alpha/AppleIntelInfo) 的维护
 
@@ -174,8 +177,8 @@
 ## 支持与讨论
 
 * QQ群:
-  * 247451054 [小米PRO黑苹果高级群](http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e)
-  * 137188006 [小米PRO黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=c17e190b9466a73cf12e8caec36e87124fce9e231a895353ee817e9921fdd74e)
+* 247451054 [小米PRO黑苹果高级群](http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e)
+* 137188006 [小米PRO黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=c17e190b9466a73cf12e8caec36e87124fce9e231a895353ee817e9921fdd74e)
 
   ​
 
